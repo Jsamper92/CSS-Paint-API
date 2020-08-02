@@ -1,0 +1,52 @@
+.not-support body::before{
+  content: 'Not support';
+  top: 50%;
+  right: 40%;
+  display: block;
+  font-size: 50px;
+  position: absolute;
+}
+
+
+.paragraph {
+  font-size: 30px;
+  line-height: 1.83;
+  width: max-content;
+  padding: .25em 10px;
+  padding-right: 30px;
+}
+
+.only-css {
+  overflow: hidden;
+  position: relative;
+  background: hsl(266, 100%, 50%);
+}
+
+.only-css::after{
+  content: '';
+  left: 0;
+  width: 96%;
+  height: 15px;
+  bottom: -9px;
+  position: absolute;
+  transform: rotate(-3deg);
+  background-color: rgba(0,0,0,.35);
+}
+
+.only-css::before{
+  content: '';
+  top: 0;
+  right: 0;
+  z-index: 1;
+  position: absolute;
+  border-top: solid 69px transparent;
+  border-right: solid 20px white;
+}
+
+@supports (background: paint(shape-bg)) {
+  .api-css-paint {
+    background: paint(shape-bg);
+  }
+}
+
+
