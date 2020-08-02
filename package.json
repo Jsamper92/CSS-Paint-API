@@ -1,0 +1,27 @@
+{
+  "name": "css-paint-api",
+  "version": "1.0.0",
+  "description": "Testing Paint API",
+  "main": "worklet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jsamper92/CSS-Paint-API.git"
+  },
+  "keywords": [
+    "CSS-Paint",
+    "CSS-Houdini"
+  ],
+  "author": "Javier Samper Arias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jsamper92/CSS-Paint-API/issues"
+  },
+  "homepage": "https://github.com/Jsamper92/CSS-Paint-API#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
