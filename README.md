@@ -9,4 +9,4 @@ CSS Paint API del proyecto Houdini donde podremos ver un ejemplo guiado del [art
 
 ## Ejemplos
 - En la rama `master` encontraremos unicamente una prueba de concepto de Paint API
-- En la rama `properties-values-api`encontraremos una prueba de concepto de Paint API + properties and values API
+- En la rama `properties-values-api`encontraremos una prueba de concepto de Paint API + Properties and Values API
