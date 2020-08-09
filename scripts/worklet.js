@@ -1,12 +1,12 @@
-
 class myCustomerPaint{
-  constructor () {
-    // Color
-    this.hue = 266;
+  static get inputProperties() {
+    return ['--my-color']
   }
-  paint (ctx, geom) {
+  paint (ctx, size, properties) {
+    // Recogemos el valor de la custom property
+    let myColor = properties.get('--my-color').toString(); 
     // Establecemos el color que usaremos para definir el color de fondo del elemento
-    ctx.fillStyle = 'hsl(' + this.hue + ', 100%, 50%)';
+    ctx.fillStyle = myColor;
 
     // Sentencia que define el inicio de pintado
     ctx.beginPath();
@@ -14,9 +14,9 @@ class myCustomerPaint{
     // Establecemos el eje x e y donde iniciaremos el trazo
     ctx.moveTo(0, 0);
 
-    ctx.lineTo(geom.width, 0);
-    ctx.lineTo(geom.width - 20, geom.height);
-    ctx.lineTo(0, geom.height);
+    ctx.lineTo(size.width, 0);
+    ctx.lineTo(size.width - 20, size.height);
+    ctx.lineTo(0, size.height);
     ctx.fill();
 
     // Establecemos el comportamiento de las capas
@@ -28,9 +28,9 @@ class myCustomerPaint{
     // Iniciaremos un nuevo trazo donde se visualizará el efecto de sombreado 
     // estableciendo la posicion y ancho
     ctx.beginPath();
-    ctx.moveTo(0, geom.height);
-    ctx.lineTo(geom.width, geom.height - 12);
-    ctx.lineTo(geom.width, geom.height);
+    ctx.moveTo(0, size.height);
+    ctx.lineTo(size.width, size.height - 12);
+    ctx.lineTo(size.width, size.height);
     ctx.fill();
   }
 }
